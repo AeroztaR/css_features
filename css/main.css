@@ -1,0 +1,82 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {margin: 0;}
+  
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+p {margin: 0;}
+
+a {text-decoration: none;}
+  
+audio, canvas, iframe, img, svg, video {vertical-align: middle;}
+  
+textarea {resize: none;}
+
+input, select, button {outline: none;}
+  
+* {box-sizing: border-box;}
+
+*:before, *:after {box-sizing: border-box;}
+
+
+/* CSS Features */
+  
+.wrapper {
+    display: flex;
+    max-width: 960px;
+    margin: 5vh auto;
+    padding: 0 5%;
+}
+
+/* flip card */
+
+.card {
+    position: relative;
+    min-width: 200px;
+    min-height: 200px;
+    perspective: 1000px;
+}
+
+.front, 
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 2s;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: rgb(119, 173, 66);
+}
+
+.back {
+    background-color: darkslateblue;
+    transform: rotateY(180deg);
+}
+
+.card:hover .front, 
+.card:active .front {transform: rotateY(180deg);}
+
+.card:hover .back, 
+.card:active .back {transform: rotateY(360deg);}
