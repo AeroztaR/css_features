@@ -37,6 +37,7 @@ input, select, button {outline: none;}
   
 .wrapper {
     display: flex;
+    flex-flow: column wrap;
     max-width: 960px;
     margin: 5vh auto;
     padding: 0 5%;
@@ -46,9 +47,10 @@ input, select, button {outline: none;}
 
 .card {
     position: relative;
-    min-width: 200px;
+    max-width: 200px;
     min-height: 200px;
     perspective: 1000px;
+    margin-bottom: 2em;
 }
 
 .front, 
@@ -80,3 +82,36 @@ input, select, button {outline: none;}
 
 .card:hover .back, 
 .card:active .back {transform: rotateY(360deg);}
+
+
+.section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #00b0ff;
+    color: #fff;
+    padding: 15px;
+    height: 50vh;
+    position: relative;
+    perspective: 1000px;
+}
+
+.section:hover .desktop,
+.section:active .desktop {transform: translateY(0) rotateY(20deg);}
+
+.presentation {
+    margin-right: 10%;
+}
+
+.desktop {
+    background: url('./../img/desktop.jpg') center no-repeat;
+    background-size: cover;
+    width: 30vw;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 3s;
+    transform: translateX(-500%);
+}
+
