@@ -83,6 +83,7 @@ input, select, button {outline: none;}
 .card:hover .back, 
 .card:active .back {transform: rotateY(360deg);}
 
+/* another transfrom card */
 
 .section {
     display: flex;
