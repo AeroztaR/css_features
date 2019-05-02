@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #607D8B;
 }
   
 img {
@@ -197,3 +198,71 @@ input, select, button {outline: none;}
     margin-right: 20px;
     color: #000;
 }
+
+/* sliding menu */
+
+.wrap {
+    display: flex;
+    background-color: #3F51B5;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliding-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 40vh;
+    display: flex;
+    background-color:#E64A19;
+    transition: 1s;
+    transform: translateX(-100%);
+}
+
+.sliding-menu__nav {width: 100%;}
+
+.sliding-menu__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sliding-menu__link {
+    color: #fff;
+    font-weight: bold;
+}
+
+.sliding-menu__btn {
+    position: absolute;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    right: -45px;
+    top: -10px;
+}
+
+.sliding-menu-btn__line,
+.sliding-menu-btn__line::before,
+.sliding-menu-btn__line::after {
+    background-color: #fff;
+}
+
+.sliding-menu--active {transform: translateX(0%);}
+
+.sliding-menu--active .sliding-menu-btn__line {height: 0;}
+
+.sliding-menu--active .sliding-menu-btn__line::before {transform: rotate(45deg);}
+.sliding-menu--active .sliding-menu-btn__line::after {transform: rotate(-45deg);}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.content {width: 100%;}

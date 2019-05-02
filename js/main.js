@@ -7,3 +7,10 @@ menuBtn.addEventListener('click', (e) => {
     menuNav.classList.toggle('menu__nav--active');
 });
 
+const   slideMenuBtn = document.querySelector('.sliding-menu__btn'),
+        slideMenu = document.querySelector('.sliding-menu');
+
+slideMenuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    slideMenu.classList.toggle('sliding-menu--active');
+});
