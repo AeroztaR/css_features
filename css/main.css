@@ -266,3 +266,44 @@ input, select, button {outline: none;}
 }
 
 .content {width: 100%;}
+
+/* checkbox */
+
+.epic-choice {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 2%;
+    padding: 3%;
+    background-color: #00BCD4;
+    color: #fff;
+}
+
+.check__input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.check {
+    padding-left: 3%;
+}
+
+.check__box {
+    position: absolute;
+    margin-top: 0.15em;
+    margin-left: -1.2em;
+    width: 0.8em;
+    height: 0.8em;
+    box-shadow: 0 0 0 0.1em #FFCD42;
+    border-radius: 0.05em;
+    background-color: #fff;
+}
+
+.check__input:checked + .check__box {
+    background-color: #17A05D;
+}
+
+.check__input:focus + .check__box {
+    box-shadow: 0 0 0 0.1em #FFCD42,
+                0 0 0 0.2em rgb(255, 156, 189);
+}
