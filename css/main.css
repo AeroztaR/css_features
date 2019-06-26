@@ -307,3 +307,21 @@ input, select, button {outline: none;}
     box-shadow: 0 0 0 0.1em #FFCD42,
                 0 0 0 0.2em rgb(255, 156, 189);
 }
+
+/* blend mode */
+
+.blendmode {
+    margin-top: 2%;
+}
+
+.blendmode__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    color: #fff;
+    mix-blend-mode: multiply;
+    text-transform: uppercase;
+}

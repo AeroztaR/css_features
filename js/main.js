@@ -1,3 +1,5 @@
+// burger menu
+
 const   menuBtn = document.querySelector('.menu-btn'),
         menuNav = document.querySelector('.menu__nav');
 
@@ -6,6 +8,8 @@ menuBtn.addEventListener('click', (e) => {
     menuBtn.classList.toggle('menu-btn--active');
     menuNav.classList.toggle('menu__nav--active');
 });
+
+// sliding menu
 
 const   slideMenuBtn = document.querySelector('.sliding-menu__btn'),
         slideMenu = document.querySelector('.sliding-menu');
